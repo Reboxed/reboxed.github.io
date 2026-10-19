@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Reboxed</title>
+<meta name="description" content="Questions fréquentes sur Reboxed : prix, import rekordbox, matériel, stems, système.">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="hero small">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h1><span class="line"><span>Questions</span></span><span class="line"><span class="grad">fréquentes.</span></span></h1>
+  </div>
+</header>
+<section style="padding-top:0">
+  <div class="container">
+    <div class="faq">
+      <details class="reveal" open><summary>C'est vraiment gratuit ?</summary><p>Oui. Licence MIT : pas d'abonnement, pas de compte, pas de version payante. Le code est sur GitHub.</p></details>
+      <details class="reveal"><summary>Je peux récupérer ma collection rekordbox ?</summary><p>Oui, par l'export XML : morceaux, infos, hot cues, memory cues, boucles, grilles, playlists et dossiers. Réimport possible sans doublons.</p></details>
+      <details class="reveal"><summary>Mes fichiers audio sont-ils modifiés ?</summary><p>Non. Tags, cues et analyses sont enregistrés dans ta bibliothèque Reboxed, pas dans tes fichiers.</p></details>
+      <details class="reveal"><summary>Quel matériel est pris en charge ?</summary><p>DDJ-GRV6, DDJ-FLX2, FLX4, FLX6 et FLX10 avec un plugin fourni. Les autres contrôleurs Pioneer si leur mapping est dans une installation rekordbox, ou avec un plugin créé depuis leur <code>.midi.csv</code>. Sur CDJ / XDJ, avec une clé exportée par Reboxed.</p></details>
+      <details class="reveal"><summary>Faut-il une carte graphique pour les stems ?</summary><p>Non, tout tourne sur le processeur. FAST va environ 7 fois plus vite que le temps réel.</p></details>
+      <details class="reveal"><summary>Comment mettre à jour ?</summary><p>Télécharge la nouvelle version et installe-la par-dessus : ta bibliothèque est gardée. La version s'affiche dans la barre de titre.</p></details>
+      <details class="reveal"><summary>Et sur Mac ?</summary><p>Pas pour l'instant : Windows uniquement.</p></details>
+      <details class="reveal"><summary>Je peux contribuer ?</summary><p>Oui : signale un bug ou propose une amélioration sur <a href="https://github.com/Vlocky1/Reboxed" style="text-decoration:underline">GitHub</a>, ou crée le plugin de ton contrôleur.</p></details>
+    </div>
+  </div>
+</section>
+<section class="final">
+  <div class="container reveal">
+    <h2>Prêt ?</h2>
+    <p class="lead" style="margin:18px auto 34px">Reboxed <span data-version></span>, gratuit.</p>
+    <a class="btn btn-primary magnetic" data-download href="telecharger.html">Télécharger</a>
+  </div>
+</section>
+<script src="assets/site.js"></script>
+</body>
+</html>

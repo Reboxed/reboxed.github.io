@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Télécharger — Reboxed</title>
+<meta name="description" content="Télécharger Reboxed pour Windows : installation, configuration requise et ce qu'il faut savoir.">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="hero small">
+  <canvas id="heroWave"></canvas>
+  <div class="container" style="position:relative">
+    <span class="pill"><b>v<span data-version></span></b> Windows 10 / 11 · 64 bits</span>
+    <h1><span class="line"><span>Télécharger</span></span><span class="line"><span class="grad">Reboxed.</span></span></h1>
+    <p class="lead">Gratuit, sans compte. Une seule installation.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary magnetic" data-download href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg><span>Reboxed-Setup-<span data-version></span>.exe</span> <small>127 Mo</small></a>
+      <a class="btn btn-ghost magnetic" href="https://github.com/Vlocky1/Reboxed/releases">Toutes les versions</a>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:40px">
+  <div class="container">
+    <div class="center reveal"><span class="eyebrow">Installation</span><h2>3 étapes</h2></div>
+    <div class="steps">
+      <div class="step reveal"><h3>Télécharge</h3><p>L'installeur ci-dessus.</p></div>
+      <div class="step reveal d1"><h3>Installe</h3><p>Windows affiche « Éditeur inconnu » : <i>Informations complémentaires</i> ▸ <i>Exécuter quand même</i>.</p></div>
+      <div class="step reveal d2"><h3>Importe</h3><p>rekordbox : <code>File ▸ Export Collection in xml format</code>, puis Reboxed : ⋯ ▸ <i>Import from rekordbox</i>.</p></div>
+    </div>
+
+    <div class="center reveal" style="margin-top:100px"><span class="eyebrow">Configuration</span><h2>Ce qu'il faut</h2></div>
+    <div class="req">
+      <div class="reveal"><b>Windows 10 / 11</b><span>64 bits</span></div>
+      <div class="reveal d1"><b>127 Mo</b><span>pour l'installeur</span></div>
+      <div class="reveal d2"><b>+ 79 à 245 Mo</b><span>pour les modèles de stems, au premier usage</span></div>
+      <div class="reveal d3"><b>Processeur</b><span>suffisant pour les stems, pas besoin de carte graphique</span></div>
+    </div>
+
+    <div class="center reveal" style="margin-top:100px"><span class="eyebrow">À savoir</span><h2>Pas de surprise.</h2></div>
+    <div class="honest">
+      <div class="reveal"><b>Installeur non signé.</b> Windows affiche « Éditeur inconnu ».</div>
+      <div class="reveal d1"><b>Matériel pas encore testé physiquement.</b> Contrôleurs et export CDJ vérifiés avec des outils.</div>
+      <div class="reveal"><b>Téléchargement :</b> yt-dlp, ffmpeg et deno à installer à part.</div>
+      <div class="reveal d1"><b>Spotify :</b> demande ta propre appli (compte Premium). Deezer marche sans rien.</div>
+      <div class="reveal"><b>Windows uniquement</b> pour l'instant.</div>
+      <div class="reveal d1"><b>Non affilié</b> à AlphaTheta / Pioneer DJ.</div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container reveal">
+    <h2>Une question ?</h2>
+    <p class="lead" style="margin:18px auto 34px">Les réponses sont dans la FAQ.</p>
+    <a class="btn btn-ghost magnetic" href="faq.html">Voir la FAQ</a>
+  </div>
+</section>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stems — Reboxed</title>
+<meta name="description" content="Séparation en stems dans Reboxed : VOCAL, INST, BASS, DRUMS par deck, moteurs FAST et HQ. Démo interactive.">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="hero small">
+  <canvas id="heroWave"></canvas>
+  <div class="container" style="position:relative">
+    <span class="eyebrow">Stems</span>
+    <h1><span class="line"><span>Quatre pistes,</span></span><span class="line"><span class="grad">un clic.</span></span></h1>
+    <p class="lead">Reboxed sépare chaque morceau en voix, instruments, basse et batterie. Écoute.</p>
+  </div>
+</header>
+
+<section style="padding-top:10px">
+  <div class="container"><div data-stems-player></div></div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="feature" style="margin-top:0">
+      <div class="f-text reveal">
+        <span class="eyebrow">Deux moteurs</span>
+        <h3>FAST tout de suite, HQ ensuite</h3>
+        <ul>
+          <li><span><b>FAST</b> (Spleeter) : environ 7× le temps réel. Démarre à la tête de lecture, utilisable dès le premier bloc.</span></li>
+          <li><span><b>HQ</b> (HT-Demucs) : meilleure séparation, en arrière-plan en mode <i>auto</i>.</span></li>
+          <li><span>Couper d'un clic, solo avec Maj + clic, onde colorée par stem.</span></li>
+          <li><span>Stems gardés en MP3 (environ 9 Mo par stem pour 5 min).</span></li>
+        </ul>
+        <p class="note">Modèles téléchargés au premier usage : FAST 79 Mo, HQ 166 Mo. Calcul sur le processeur, pas besoin de carte graphique.</p>
+      </div>
+      <div class="shot-stack reveal d1">
+        <figure class="shot tilt" data-full="assets/shots/23-song-stems.webp" data-cap="« Hot Core » en stems HQ, voix coupée"><img src="assets/shots/23-song-stems.webp" alt="Stems HQ" loading="lazy"><span class="glare"></span></figure>
+        <figure class="shot tilt" data-full="assets/shots/19-stems-settings.webp" data-cap="Préférences ▸ Stems"><img src="assets/shots/19-stems-settings.webp" alt="Réglages" loading="lazy"><span class="glare"></span></figure>
+      </div>
+    </div>
+    <div class="allgrid">
+      <div class="card reveal"><h3><i>🎤</i>Acapella</h3><p>Isole la voix pour la poser sur un autre morceau.</p></div>
+      <div class="card reveal d1"><h3><i>🥁</i>Batterie</h3><p>Garde le beat d'un morceau, coupe sa mélodie.</p></div>
+      <div class="card reveal d2"><h3><i>🎛️</i>Groove Circuit</h3><p>Avec le DDJ-GRV6 : DRUM SWAP, CAPTURE, ROLL, PART ISOLATOR.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container reveal">
+    <h2>À toi de <span class="grad">remixer.</span></h2>
+    <p class="lead" style="margin:18px auto 34px">Les stems sont inclus, gratuitement.</p>
+    <a class="btn btn-primary magnetic" href="telecharger.html">Télécharger</a>
+  </div>
+</section>
+<script src="assets/site.js"></script>
+<script src="assets/stems-player.js"></script>
+</body>
+</html>
