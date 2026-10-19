@@ -42,6 +42,32 @@ window.REBOXED = { VERSION, DOWNLOAD };
     if (heroScreen) { const s = Math.min(1, scrollY / 600); heroScreen.style.transform = `rotateX(${18 * (1 - s)}deg) scale(${0.94 + 0.06 * s})`; }
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // ---- side rail replacing the native scrollbar: lights up while scrolling, draggable ----
+  const rail = document.createElement('div'); rail.className = 'rail idle'; rail.innerHTML = '<span class="thumb"></span>';
+  document.body.append(rail);
+  const thumb = $('.thumb', rail); let sleep;
+  const maxScroll = () => Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  const placeRail = () => {
+    const H = rail.clientHeight; const th = Math.max(36, H * (innerHeight / document.documentElement.scrollHeight));
+    thumb.style.height = `${th}px`; thumb.style.transform = `translateY(${(H - th) * (scrollY / maxScroll())}px)`;
+    rail.style.display = maxScroll() > 2 ? '' : 'none';
+  };
+  const placeTicks = () => {
+    $$('.tick', rail).forEach((t) => t.remove());
+    $$('section, header.hero').forEach((s) => { const t = document.createElement('i'); t.className = 'tick'; t.style.top = `${(s.offsetTop / document.documentElement.scrollHeight) * 100}%`; rail.append(t); });
+  };
+  addEventListener('scroll', () => {
+    placeRail(); rail.classList.add('live'); rail.classList.remove('idle');
+    clearTimeout(sleep); sleep = setTimeout(() => { rail.classList.remove('live'); rail.classList.add('idle'); }, 900);
+  }, { passive: true });
+  addEventListener('resize', () => { placeRail(); placeTicks(); });
+  addEventListener('load', () => { placeRail(); placeTicks(); });
+  placeRail();
+  const seek = (e) => { const r = rail.getBoundingClientRect(); const th = thumb.offsetHeight; window.scrollTo({ top: ((e.clientY - r.top - th / 2) / (r.height - th)) * maxScroll(), behavior: 'instant' }); };
+  rail.addEventListener('pointerdown', (e) => { rail.setPointerCapture(e.pointerId); rail.classList.add('drag'); seek(e); });
+  rail.addEventListener('pointermove', (e) => { if (rail.classList.contains('drag')) seek(e); });
+  rail.addEventListener('pointerup', () => rail.classList.remove('drag'));
   addEventListener('pointermove', (e) => { spot.style.left = `${e.clientX}px`; spot.style.top = `${e.clientY}px`; spot.style.opacity = 1; });
 
   // ---- split section titles into words (each one rises on reveal) ----
