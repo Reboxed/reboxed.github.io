@@ -22,7 +22,7 @@ window.REBOXED = { VERSION, DOWNLOAD };
     </div></nav>`);
   document.body.insertAdjacentHTML('beforeend', `
     <footer><div class="container foot">
-      <div><a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>re<b>box</b>ed</span></a><p style="margin-top:10px;max-width:320px">Logiciel DJ gratuit et libre pour Windows. Comme Rekordbox, mais en mieux.</p></div>
+      <div><a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>re<b>box</b>ed</span></a><p style="margin-top:10px;max-width:320px">Logiciel DJ gratuit et libre pour Windows. Comme Rekordbox, mais en mieux.</p><a class="insta" href="https://www.instagram.com/rebox.ed/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@rebox.ed</a></div>
       <div><h4>Découvrir</h4><a href="fonctionnalites.html">Fonctionnalités</a><a href="stems.html">Stems</a><a href="materiel.html">Matériel &amp; CDJ</a></div>
       <div><h4>Commencer</h4><a href="telecharger.html">Télécharger</a><a href="faq.html">FAQ</a><a href="https://github.com/Vlocky1/Reboxed/releases">Versions</a></div>
       <div><h4>Contact</h4><a href="https://www.instagram.com/rebox.ed/" target="_blank" rel="noopener">Instagram @rebox.ed</a><a href="https://github.com/Vlocky1/Reboxed">GitHub</a><a href="https://github.com/Vlocky1/Reboxed/issues">Signaler un bug</a><a href="https://github.com/Vlocky1/Reboxed/blob/master/LICENSE">Licence MIT</a></div>

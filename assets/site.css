@@ -261,6 +261,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 36px;color:var(--dim);fon
 .foot h4{color:var(--text);font:600 13px var(--font);margin-bottom:10px}
 .foot a{display:block;color:var(--muted);padding:3px 0}
 .foot a:hover{color:var(--text)}
+.foot a.insta{display:inline-flex;align-items:center;gap:9px;margin-top:16px;padding:9px 15px 9px 11px;border-radius:12px;color:#fff;font-weight:600;font-size:14px;background:linear-gradient(135deg,#f9ce34,#ee2a7b 50%,#6228d7);box-shadow:0 10px 30px -12px #ee2a7b;transition:transform .2s,box-shadow .2s}
+.foot a.insta:hover{color:#fff;transform:translateY(-2px);box-shadow:0 14px 36px -10px #ee2a7b}
+.foot a.insta svg{width:18px;height:18px}
 .foot .legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px;margin-top:10px}
 @media(max-width:760px){.foot{grid-template-columns:1fr 1fr}}
 
