@@ -149,15 +149,6 @@ window.REBOXED = { VERSION, DOWNLOAD };
       s.style.cssText = `width:${d}px;height:${d}px;left:${e.clientX - r.left - d / 2}px;top:${e.clientY - r.top - d / 2}px`;
       b.append(s); setTimeout(() => s.remove(), 700);
     });
-    // glowing cursor ring (mouse only)
-    if (matchMedia('(pointer: fine)').matches) {
-      const ring = document.createElement('div'); ring.className = 'cursor'; document.body.append(ring);
-      let cx = innerWidth / 2; let cy = innerHeight / 2; let tx = cx; let ty = cy;
-      addEventListener('pointermove', (e) => { tx = e.clientX; ty = e.clientY; ring.classList.add('on'); ring.classList.toggle('big', !!e.target.closest('a, button, summary, [data-full], .stem-btn, .p-wave')); });
-      document.addEventListener('pointerleave', () => ring.classList.remove('on'));
-      const follow = () => { cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2; ring.style.transform = `translate(${cx}px, ${cy}px)`; requestAnimationFrame(follow); };
-      requestAnimationFrame(follow);
-    }
   }
 
   // ---- text that lights up word by word while scrolling ----
