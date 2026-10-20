@@ -26,7 +26,7 @@ window.REBOXED = { VERSION, DOWNLOAD };
       <div><h4>Découvrir</h4><a href="fonctionnalites.html">Fonctionnalités</a><a href="stems.html">Stems</a><a href="materiel.html">Plugins &amp; CDJ</a></div>
       <div><h4>Commencer</h4><a href="telecharger.html">Télécharger</a><a href="faq.html">FAQ</a><a href="https://github.com/Vlocky1/Reboxed/releases">Versions</a></div>
       <div><h4>Projet</h4><a href="https://github.com/Vlocky1/Reboxed">GitHub</a><a href="https://github.com/Vlocky1/Reboxed/blob/master/LICENSE">Licence MIT</a><a href="https://github.com/Vlocky1/Reboxed/blob/master/docs/PLUGINS.md">Créer un plugin</a></div>
-      <p class="legal">Reboxed ${VERSION} · Non affilié à AlphaTheta / Pioneer DJ ; rekordbox, CDJ et DDJ sont leurs marques. Démo audio : « Hot Core », Alex Beroza ft. Snowflake, CC BY 3.0 (ccMixter).</p>
+      <p class="legal">Reboxed ${VERSION} · Non affilié à AlphaTheta / Pioneer DJ ; rekordbox et CDJ sont leurs marques. Démo audio : « Hot Core », Alex Beroza ft. Snowflake, CC BY 3.0 (ccMixter).</p>
     </div></footer>
     <div class="lightbox" id="lightbox"><div><img id="lbImg" alt=""><p id="lbCap"></p></div></div>`);
   $$('[data-download]').forEach((a) => { a.href = DOWNLOAD; });
@@ -133,7 +133,7 @@ window.REBOXED = { VERSION, DOWNLOAD };
   // ---- marquee ----
   const mq = $('#marquee');
   if (mq) {
-    const words = ['Jogs 33⅓','Stems FAST & HQ', 'Export CDJ / XDJ', 'Import rekordbox', 'YouTube & SoundCloud', 'Deezer & Spotify', 'Auto-tag', 'Nettoyeur de noms', '16 Beat FX', 'Color FX', 'Sampler', 'Automix', 'REC', 'Groove Circuit', 'Plugins MIDI', 'Open source', 'Intelligent Playlists', 'Camelot', 'Phrases', '8 thèmes', 'Licence MIT'];
+    const words = ['Jogs 33⅓','Stems FAST & HQ', 'Export CDJ / XDJ', 'Import rekordbox', 'YouTube & SoundCloud', 'Deezer & Spotify', 'Auto-tag', 'Nettoyeur de noms', '16 Beat FX', 'Color FX', 'Sampler', 'Automix', 'REC', 'Plugins MIDI', 'Open source', 'Intelligent Playlists', 'Camelot', 'Phrases', '8 thèmes', 'Licence MIT'];
     mq.innerHTML = [...words, ...words].map((w) => `<span>${w}</span>`).join('');
   }
 
