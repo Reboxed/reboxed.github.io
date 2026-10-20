@@ -148,10 +148,7 @@
 <script src="assets/site.js?v=20"></script>
 <script>
   const shots = [
-    ['01-performance', '2 decks avec jogs'], ['22-song-loaded', 'Morceau chargé'], ['23-song-stems', 'Stems HQ'], ['03-waveform-zoom', 'Onde zoomée'],
-    ['05-sampler', 'Sampler'], ['06-library', 'Mode LIBRARY'], ['07-download-search', 'Recherche YouTube / SoundCloud'], ['09-clean-names', 'Nettoyeur de noms'],
-    ['10-autotag-recipe', 'Auto-tag : recette'], ['11-autotag-review', 'Auto-tag : aperçu'], ['12-track-info-lookup', 'Track info'], ['13-appearance', 'Thèmes'],
-    ['18-library-settings', 'Bibliothèque sur clé USB'], ['20-downloads-settings', 'Réglages des téléchargements'], ['19-stems-settings', 'Réglages des stems'], ['21-cdj-export', 'Export CDJ'],
+    ['01-performance', '2 decks avec jogs'], ['09-clean-names', 'Nettoyeur de noms'], ['21-cdj-export', 'Export CDJ'], ['11-autotag-review', 'Auto-tag'],
   ];
   const gal = document.getElementById('gallery');
   gal.innerHTML = shots.map(([f, c], i) => `<figure class="reveal${i % 4 ? ` d${i % 4}` : ''}" data-full="assets/shots/${f}.webp" data-cap="${c}"><img src="assets/shots/${f}.webp" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`).join('');
