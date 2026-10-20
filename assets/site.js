@@ -1,7 +1,7 @@
 // Shared by every page: navigation, footer, scroll effects, reveal, tilt, lightbox, hero waves.
 const VERSION = '1.11.0';
 const DOWNLOAD = `https://github.com/Vlocky1/Reboxed/releases/download/v${VERSION}/Reboxed-Setup-${VERSION}.exe`;
-const PAGES = [['index.html', 'Accueil'], ['fonctionnalites.html', 'Fonctionnalités'], ['stems.html', 'Stems'], ['materiel.html', 'Plugins & CDJ'], ['telecharger.html', 'Télécharger'], ['faq.html', 'FAQ']];
+const PAGES = [['index.html', 'Accueil'], ['fonctionnalites.html', 'Fonctionnalités'], ['stems.html', 'Stems'], ['materiel.html', 'Matériel & CDJ'], ['telecharger.html', 'Télécharger'], ['faq.html', 'FAQ']];
 window.REBOXED = { VERSION, DOWNLOAD };
 
 (() => {
@@ -23,9 +23,9 @@ window.REBOXED = { VERSION, DOWNLOAD };
   document.body.insertAdjacentHTML('beforeend', `
     <footer><div class="container foot">
       <div><a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>re<b>box</b>ed</span></a><p style="margin-top:10px;max-width:320px">Logiciel DJ gratuit et libre pour Windows. Comme Rekordbox, mais en mieux.</p></div>
-      <div><h4>Découvrir</h4><a href="fonctionnalites.html">Fonctionnalités</a><a href="stems.html">Stems</a><a href="materiel.html">Plugins &amp; CDJ</a></div>
+      <div><h4>Découvrir</h4><a href="fonctionnalites.html">Fonctionnalités</a><a href="stems.html">Stems</a><a href="materiel.html">Matériel &amp; CDJ</a></div>
       <div><h4>Commencer</h4><a href="telecharger.html">Télécharger</a><a href="faq.html">FAQ</a><a href="https://github.com/Vlocky1/Reboxed/releases">Versions</a></div>
-      <div><h4>Projet</h4><a href="https://github.com/Vlocky1/Reboxed">GitHub</a><a href="https://github.com/Vlocky1/Reboxed/blob/master/LICENSE">Licence MIT</a><a href="https://github.com/Vlocky1/Reboxed/blob/master/docs/PLUGINS.md">Créer un plugin</a></div>
+      <div><h4>Contact</h4><a href="https://www.instagram.com/rebox.ed/" target="_blank" rel="noopener">Instagram @rebox.ed</a><a href="https://github.com/Vlocky1/Reboxed">GitHub</a><a href="https://github.com/Vlocky1/Reboxed/issues">Signaler un bug</a><a href="https://github.com/Vlocky1/Reboxed/blob/master/LICENSE">Licence MIT</a></div>
       <p class="legal">Reboxed ${VERSION} · Non affilié à AlphaTheta / Pioneer DJ ; rekordbox et CDJ sont leurs marques. Démo audio : « Hot Core », Alex Beroza ft. Snowflake, CC BY 3.0 (ccMixter).</p>
     </div></footer>
     <div class="lightbox" id="lightbox"><div><img id="lbImg" alt=""><p id="lbCap"></p></div></div>`);
@@ -97,21 +97,6 @@ window.REBOXED = { VERSION, DOWNLOAD };
     requestAnimationFrame(step);
   };
 
-  // ---- typed code windows ----
-  const typeCode = (box) => {
-    const pre = $('pre', box); if (!pre || box.dataset.done) return; box.dataset.done = 1;
-    const src = pre.dataset.src || pre.textContent; pre.dataset.src = src;
-    const paint = (txt) => txt.replace(/&/g, '&amp;').replace(/</g, '&lt;')
-      .replace(/("[^"]*")(\s*:)/g, '<span class="k">$1</span>$2')
-      .replace(/:\s*("[^"]*")/g, (m, v) => m.replace(v, `<span class="s">${v}</span>`))
-      .replace(/(\["[^\]]*"\])/g, '<span class="s">$1</span>')
-      .replace(/(:\s*)(\d+)/g, '$1<span class="n">$2</span>');
-    if (reduce) { pre.innerHTML = paint(src); return; }
-    let n = 0;
-    const tick = () => { n = Math.min(src.length, n + 2); pre.innerHTML = `${paint(src.slice(0, n))}<b class="caret"></b>`; if (n < src.length) setTimeout(tick, 16); else box.classList.add('typed'); };
-    tick();
-  };
-
   // ---- reveal + counters ----
   const io = new IntersectionObserver((entries) => entries.forEach((en) => {
     if (!en.isIntersecting) return;
@@ -119,7 +104,6 @@ window.REBOXED = { VERSION, DOWNLOAD };
     el.classList.add('in'); io.unobserve(el);
     setTimeout(() => el.classList.add('settled'), 1300);
     $$('.eyebrow', el).concat(el.matches('.eyebrow') ? [el] : []).forEach(scramble);
-    if (el.matches('[data-type]')) typeCode(el);
     $$('[data-count]', el).forEach((c) => {
       const to = Number(c.dataset.count); const suf = c.dataset.suffix || ''; const t0 = performance.now();
       const step = (t) => { const k = Math.min(1, (t - t0) / 1400); c.textContent = Math.round(to * (1 - (1 - k) ** 3)) + suf; if (k < 1) requestAnimationFrame(step); };
@@ -133,7 +117,7 @@ window.REBOXED = { VERSION, DOWNLOAD };
   // ---- marquee ----
   const mq = $('#marquee');
   if (mq) {
-    const words = ['Jogs 33⅓','Stems FAST & HQ', 'Export CDJ / XDJ', 'Import rekordbox', 'YouTube & SoundCloud', 'Deezer & Spotify', 'Auto-tag', 'Nettoyeur de noms', '16 Beat FX', 'Color FX', 'Sampler', 'Automix', 'REC', 'Plugins MIDI', 'Open source', 'Intelligent Playlists', 'Camelot', 'Phrases', '8 thèmes', 'Licence MIT'];
+    const words = ['Jogs 33⅓','Stems FAST & HQ', 'Export CDJ / XDJ', 'Import rekordbox', 'YouTube & SoundCloud', 'Deezer & Spotify', 'Auto-tag', 'Nettoyeur de noms', '16 Beat FX', 'Color FX', 'Sampler', 'Automix', 'REC', 'Contrôleurs MIDI','Open source', 'Intelligent Playlists', 'Camelot', 'Phrases', '8 thèmes', 'Licence MIT'];
     mq.innerHTML = [...words, ...words].map((w) => `<span>${w}</span>`).join('');
   }
 

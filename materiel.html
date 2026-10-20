@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Plugins &amp; CDJ — Reboxed</title>
-<meta name="description" content="Reboxed est open source : ajoute n'importe quel contrôleur MIDI avec un plugin, même ceux que rekordbox ignore. Export sur clé USB pour CDJ / XDJ.">
+<title>Matériel &amp; CDJ — Reboxed</title>
+<meta name="description" content="Ce que rekordbox fait avec ton contrôleur, Reboxed le fait aussi. Export sur clé USB pour CDJ / XDJ, bibliothèque sur clé.">
 <meta name="theme-color" content="#08080b">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,67 +14,21 @@
 <body>
 <header class="hero small">
   <div class="container">
-    <span class="eyebrow">Open source</span>
-    <h1><span class="line"><span>Ton matériel.</span></span><span class="line"><span class="grad">Tes règles.</span></span></h1>
-    <p class="lead">Le code est ouvert. N'importe quel contrôleur MIDI peut rejoindre Reboxed, même ceux que rekordbox ignore.</p>
+    <span class="eyebrow">Matériel</span>
+    <h1><span class="line"><span>Ton contrôleur.</span></span><span class="line"><span class="grad">Comme dans rekordbox.</span></span></h1>
+    <p class="lead">Globalement, tout ce que tu as dans rekordbox avec ton matériel, tu l'as aussi dans Reboxed.</p>
   </div>
 </header>
 
-<section style="padding-top:20px" id="plugin">
+<section style="padding-top:20px" id="controleurs">
   <div class="container">
-    <div class="feature" style="margin-top:0">
-      <div class="f-text reveal">
-        <span class="eyebrow">Plugins</span>
-        <h3>Un fichier, et ton contrôleur parle à Reboxed</h3>
-        <ul>
-          <li><span>Un plugin dit à Reboxed <b>quels messages MIDI</b> envoient les boutons, potards et jogs, et quelles LED allumer.</span></li>
-          <li><span>Il marche pour <b>n'importe quelle marque</b> : Hercules, Numark, Reloop, un vieux contrôleur MIDI…</span></li>
-          <li><span>Reconnu au branchement, activable dans Préférences ▸ Plugins.</span></li>
-          <li><span>Sans plugin : <b>MIDI learn</b> et raccourcis clavier.</span></li>
-        </ul>
-        <p class="note">Exemple ci-contre : aucun plugin Hercules n'est fourni pour l'instant, c'est à écrire.</p>
-      </div>
-      <div class="code reveal d1" data-type>
-        <div class="code-bar"><i></i><i></i><i></i><span>plugins/hercules-inpulse-200/plugin.json</span></div>
-<pre>{
-  "id": "hercules-inpulse-200",
-  "name": "Hercules DJControl Inpulse 200",
-  "kind": "controller",
-  "match": ["Inpulse 200"],
-  "mapping": "mapping.json",
-  "decks": 2
-}</pre>
-      </div>
-    </div>
-
-    <div class="center reveal" style="margin-top:110px"><span class="eyebrow">Avec un contrôleur</span><h2>Ce que rekordbox fait, <span class="grad">Reboxed le fait.</span></h2><p class="lead">Globalement, tout ce que tu as dans rekordbox avec ton matériel, tu l'as aussi dans Reboxed.</p></div>
-    <div class="allgrid">
+    <div class="allgrid" style="margin-top:0">
       <div class="card reveal"><h3><i>💿</i>Jogs</h3><p>Scratch, pitch bend, vinyl mode.</p></div>
       <div class="card reveal d1"><h3><i>🟦</i>Pads</h3><p>Hot cues, beat loop, beat jump, slicer, sampler, key shift, stems.</p></div>
       <div class="card reveal d2"><h3><i>🎚️</i>Mixer &amp; FX</h3><p>Faders, EQ, crossfader, Beat FX et Color FX.</p></div>
       <div class="card reveal"><h3><i>💡</i>LED</h3><p>Les pads et boutons s'allument comme dans rekordbox.</p></div>
       <div class="card reveal d1"><h3><i>🎧</i>Carte son</h3><p>La carte son du contrôleur est choisie au branchement : master et casque.</p></div>
-      <div class="card reveal d2"><h3><i>🔌</i>Branche et joue</h3><p>Le plugin est reconnu tout seul, sans réglage.</p></div>
-    </div>
-
-    <div class="center reveal" style="margin-top:110px"><span class="eyebrow">En trois étapes</span><h2>Ajoute ton contrôleur.</h2></div>
-    <div class="steps">
-      <div class="step reveal"><h3>Décris-le</h3><p>Un <code>plugin.json</code> et un <code>mapping.json</code>. Déjà un mapping rekordbox (<code>.midi.csv</code>) ? Préférences ▸ Plugins ▸ <i>Create from a rekordbox mapping…</i></p></div>
-      <div class="step reveal d1"><h3>Installe-le</h3><p>Préférences ▸ Plugins ▸ installer un dossier. Branche : c'est reconnu.</p></div>
-      <div class="step reveal d2"><h3>Partage-le</h3><p>Un dossier à envoyer, ou une contribution sur <a href="https://github.com/Vlocky1/Reboxed/blob/master/docs/PLUGINS.md" style="text-decoration:underline">GitHub</a> pour que tout le monde en profite.</p></div>
-    </div>
-
-    <div class="feature rev">
-      <div class="f-text reveal">
-        <span class="eyebrow">Licence MIT</span>
-        <h3>Tout est ouvert</h3>
-        <ul>
-          <li><span>Le code entier est sur <a href="https://github.com/Vlocky1/Reboxed" style="text-decoration:underline">GitHub</a>, sous licence MIT.</span></li>
-          <li><span>Corrige un bug, ajoute une fonction, adapte un mapping : <b>propose-le</b>.</span></li>
-          <li><span>Pas de fonction à débloquer, pas de matériel exigé.</span></li>
-        </ul>
-      </div>
-      <figure class="shot tilt reveal d1" data-full="assets/shots/17-plugins.webp" data-cap="Préférences ▸ Plugins"><img src="assets/shots/17-plugins.webp" alt="Plugins" loading="lazy"><span class="glare"></span></figure>
+      <div class="card reveal d2"><h3><i>🔌</i>Branche et joue</h3><p>Reconnu tout seul, sans réglage. Sinon : MIDI learn et clavier.</p></div>
     </div>
 
     <div class="feature" id="cdj">
