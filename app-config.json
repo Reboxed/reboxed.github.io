@@ -1,5 +1,8 @@
 {
-    "_comment":  "Read by the Reboxed app and by the site. donateUrl: your Buy me a coffee / Ko-fi / Lemon Squeezy donation link (https). buyUrl: the lifetime licence checkout.",
-    "donateUrl":  "https://ko-fi.com/reboxed",
-    "buyUrl":  "https://reboxed.lemonsqueezy.com/checkout/buy/3639fa22-a137-4f19-986e-ad7dbe941e4c"
+  "_comment": "Read by the Reboxed app and by the site. https links only. donateUrl: donations; buyUrl: lifetime licence; betaUrl: free beta key (once set, the beta asks for a key); price: shown in the app; betaDiscount: text shown to beta testers when the beta ends.",
+  "donateUrl": "https://ko-fi.com/reboxed",
+  "buyUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/3639fa22-a137-4f19-986e-ad7dbe941e4c",
+  "betaUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/f508be5f-68f4-4fd3-b365-8206ee56d1c9",
+  "price": "5 €",
+  "betaDiscount": ""
 }
