@@ -9,7 +9,7 @@
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=21">
+<link rel="stylesheet" href="assets/site.css?v=22">
 </head>
 <body>
 <header class="hero small">
@@ -28,7 +28,7 @@
         <h3>Le mode PERFORMANCE</h3>
         <ul>
           <li><span>Des <b>decks</b> avec un jog qui tourne à 33⅓ tours : BPM au centre, calibres <b>±6 / ±10 / ±16 / WIDE</b>, progression du morceau sur l'anneau. Glisse dessus pour scratcher.</span></li>
-          <li><span>CUE façon CDJ, <b>16 hot cues</b>, memory cues, boucles de 1/64 à 512 temps, beat jump, quantize.</span></li>
+          <li><span>CUE façon platine de club, <b>16 hot cues</b>, memory cues, boucles de 1/64 à 512 temps, beat jump, quantize.</span></li>
           <li><span>Master Tempo, Key Shift et Key Sync, Slip, Reverse, Censor, Beat Sync, Instant Doubles.</span></li>
           <li><span>Pads HOT CUE, BEAT LOOP, BEAT JUMP, SLICER, SAMPLER, KEY SHIFT, KEYBOARD.</span></li>
         </ul>
@@ -106,8 +106,8 @@
         <h3>Ta collection, organisée</h3>
         <ul>
           <li><span>Playlists, dossiers, <b>Intelligent Playlists</b>, Tag List, historiques, notes, couleurs, My Tag.</span></li>
-          <li><span>Même moteur de recherche que rekordbox, Track Filter.</span></li>
-          <li><span><b>Import rekordbox</b> (XML) : cues, grilles, playlists. Export XML et M3U8.</span></li>
+          <li><span>Recherche instantanée, insensible aux accents, Track Filter.</span></li>
+          <li><span><b>Import de ta collection</b> (XML) : cues, grilles, playlists. Export XML et M3U8.</span></li>
           <li><span>Bibliothèque sur clé USB possible et <b>ENFIN</b> pratique et intuitif.</span></li>
         </ul>
       </div>
@@ -145,10 +145,10 @@
     <a class="btn btn-primary magnetic" href="telecharger.html">Télécharger</a>
   </div>
 </section>
-<script src="assets/site.js?v=21"></script>
+<script src="assets/site.js?v=22"></script>
 <script>
   const shots = [
-    ['01-performance', '2 decks avec jogs'], ['09-clean-names', 'Nettoyeur de noms'], ['21-cdj-export', 'Export CDJ'], ['11-autotag-review', 'Auto-tag'],
+    ['01-performance', '2 decks avec jogs'], ['09-clean-names', 'Nettoyeur de noms'], ['21-usb-export', 'Export sur clé USB'], ['11-autotag-review', 'Auto-tag'],
   ];
   const gal = document.getElementById('gallery');
   gal.innerHTML = shots.map(([f, c], i) => `<figure class="reveal${i % 4 ? ` d${i % 4}` : ''}" data-full="assets/shots/${f}.webp" data-cap="${c}"><img src="assets/shots/${f}.webp" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`).join('');

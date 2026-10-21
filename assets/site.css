@@ -43,6 +43,8 @@ h3{font-size:22px;letter-spacing:-.02em}
 .grad{background:linear-gradient(100deg,var(--drums),var(--vocal) 35%,var(--accent2) 70%,var(--inst));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradShift 8s ease-in-out infinite alternate}
 @keyframes gradShift{to{background-position:100% 0}}
 .mono{font-family:var(--mono)}
+/* a name we do not write: shown blurred */
+.blurred{display:inline-block;filter:blur(14px);opacity:.85;user-select:none;pointer-events:none}
 .bg{position:fixed;inset:0;z-index:-2;pointer-events:none}
 .bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 25%,transparent 75%);opacity:.45}
 .orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:.28;transition:background 1s}
