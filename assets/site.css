@@ -106,6 +106,10 @@ nav.scrolled,nav.open{background:color-mix(in srgb,var(--bg) 78%,transparent);ba
 .hero .lead{margin:0 auto 34px;opacity:0;animation:fade .9s .35s forwards}
 .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fade .9s .5s forwards}
 .hero-meta{margin-top:16px;color:var(--dim);font:500 12px var(--mono);opacity:0;animation:fade .9s .65s forwards}
+.hero-compat{margin-top:10px;font:500 14px/1.4 var(--sans,inherit);opacity:0;animation:fade .9s .75s forwards}
+.hero-compat a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.hero-compat a:hover{text-decoration-color:currentColor}
+.hero-share[hidden]{display:none}
 @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .stage{perspective:1600px;margin:64px auto 0;width:min(1180px,96vw)}
 .screen{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line2);box-shadow:0 60px 140px -40px rgba(0,0,0,.9),0 0 120px -30px color-mix(in srgb,var(--accent) 60%,transparent);transform:rotateX(18deg) scale(.94);transform-origin:50% 0;transition:transform .2s ease-out;background:#000}
@@ -319,4 +323,4 @@ h2.split.in .w>span{transform:none;filter:none;opacity:1}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none;clip-path:none!important}.hero h1 .line>span{transform:none;filter:none}.hero .lead,.hero-ctas,.hero-meta{opacity:1}h2.split .w>span{transform:none;filter:none;opacity:1}.scrolltext span{color:var(--text)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none;clip-path:none!important}.hero h1 .line>span{transform:none;filter:none}.hero .lead,.hero-ctas,.hero-meta,.hero-compat{opacity:1}h2.split .w>span{transform:none;filter:none;opacity:1}.scrolltext span{color:var(--text)}}

@@ -10,9 +10,10 @@
 <meta property="og:image" content="assets/shots/01-performance.webp">
 <meta name="theme-color" content="#08080b">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/shots/01-performance.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=31">
+<link rel="stylesheet" href="assets/site.css?v=32">
 </head>
 <body>
 <header class="hero">
@@ -20,15 +21,17 @@
   <div class="container" style="position:relative">
     <span class="pill"><b>v<span data-version></span></b> Beta ouverte gratuite · Windows</span>
     <h1><span class="line"><span>Comme <span class="blurred" aria-hidden="true">Rekordbox</span>.</span></span><span class="line"><span class="grad">Mais en mieux.</span></span></h1>
-    <p class="lead"><strong>Gratuit pendant la beta ouverte</strong>, jusqu'au 30 décembre.</p>
+    <p class="lead"><strong>Le logiciel DJ pour Windows.</strong> Gratuit pendant la beta (jusqu'au 30 décembre), puis 5 € une fois, à vie.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary magnetic" data-download href="telecharger.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg>Télécharger pour Windows</a>
-      <a class="btn btn-ghost magnetic" href="#demo">▶ Écouter la démo</a>
+      <a class="btn btn-ghost magnetic" href="#demo" data-demo-play>▶ Écouter la démo</a>
+      <button class="btn btn-ghost hero-share" type="button" data-share hidden>Envoyer le lien vers mon PC</button>
     </div>
-    <p class="hero-meta">Windows 10 / 11 · 64 bits · 127 Mo</p>
+    <p class="hero-meta">Windows 10 / 11 · 64 bits · 127 Mo · sans compte · sans pub · fait par un DJ indépendant</p>
+    <p class="hero-compat"><a href="materiel.html">Ton contrôleur et ta clé USB pour le club : voir le matériel compatible →</a></p>
   </div>
   <div class="stage">
-    <div class="screen"><div class="bar"><i></i><i></i><i></i><span>Reboxed — mode PERFORMANCE</span></div><img src="assets/shots/01-performance.webp" alt="Reboxed : deux decks avec jogs"><span class="scan"></span></div>
+    <div class="screen"><div class="bar"><i></i><i></i><i></i><span>Reboxed — mode PERFORMANCE</span></div><img src="assets/shots/01-performance.webp" alt="Reboxed : deux decks avec jogs" fetchpriority="high" decoding="async"><span class="scan"></span></div>
     <p class="caption">Capture réelle de Reboxed.</p>
   </div>
   <div class="container">
@@ -107,7 +110,7 @@
     <a class="btn btn-primary magnetic" data-download href="telecharger.html">Télécharger Reboxed</a>
   </div>
 </section>
-<script src="assets/site.js?v=31"></script>
-<script src="assets/stems-player.js?v=31"></script>
+<script src="assets/site.js?v=32"></script>
+<script src="assets/stems-player.js?v=32"></script>
 </body>
 </html>

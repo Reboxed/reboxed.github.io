@@ -30,6 +30,18 @@ window.REBOXED = { VERSION, DOWNLOAD };
     </div></footer>
     <div class="lightbox" id="lightbox"><div><img id="lbImg" alt=""><p id="lbCap"></p></div></div>`);
   $$('[data-download]').forEach((a) => { a.href = DOWNLOAD; });
+  // On a phone the Windows installer is of no use now: send the link to oneself (share sheet, or copy).
+  const phone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (matchMedia('(pointer:coarse)').matches && !/Windows/i.test(navigator.userAgent));
+  $$('[data-share]').forEach((b) => {
+    b.hidden = !phone;
+    b.addEventListener('click', async () => {
+      const url = 'https://reboxed.github.io/telecharger.html';
+      try {
+        if (navigator.share) await navigator.share({ title: 'Reboxed — logiciel DJ pour Windows', text: 'À installer sur mon PC Windows', url });
+        else { await navigator.clipboard.writeText(url); b.textContent = 'Lien copié ✓'; }
+      } catch { /* share sheet closed */ }
+    });
+  });
   $$('[data-version]').forEach((el) => { el.textContent = VERSION; });
   // Donation link ("Buy me a coffee"), shared with the app: app-config.json. Hidden while empty.
   fetch(`app-config.json?t=${Date.now()}`).then((r) => r.json()).then((cfg) => {

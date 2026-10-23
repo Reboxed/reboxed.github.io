@@ -112,6 +112,17 @@
     applyGains();
     if (!playing) start(offset);
   }));
+  // "▶ Écouter la démo" (top of the page): scroll here and play at once, then after a few seconds go
+  // to Acapella, so the before / after of the separation is heard without touching anything.
+  document.querySelectorAll('[data-demo-play]').forEach((a) => a.addEventListener('click', async (e) => {
+    e.preventDefault();
+    host.closest('section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (playing) return;
+    let touched = false;
+    host.addEventListener('pointerdown', () => { touched = true; }, { once: true });
+    await play();
+    setTimeout(() => { if (playing && !touched) $('.p-presets [data-preset="acapella"]', host)?.click(); }, 7000);
+  }));
   let drag = null;
   const wave = $('.p-wave', host);
   wave.addEventListener('pointerdown', (e) => { if (!buffers) return; drag = { x: e.clientX, pos: position(), was: playing }; if (playing) stop(); wave.setPointerCapture(e.pointerId); });
