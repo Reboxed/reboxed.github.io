@@ -1,9 +1,9 @@
 {
   "_comment": "Read by the Reboxed app and by the site. https links only. donateUrl: donations; buyUrl: lifetime licence; betaKeyRequired: true makes the beta ask for a free beta key (Reboxed 1.17.2+), false lets everyone in without a key; betaKeyUrl: the free beta key checkout (read by 1.17.2+; the old name betaUrl made 1.17.0 ask for a key, so it stays out while the beta needs no key); price: shown in the app; betaDiscount: text shown to beta testers when the beta ends.",
   "donateUrl": "https://ko-fi.com/reboxed",
-  "buyUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/3639fa22-a137-4f19-986e-ad7dbe941e4c",
-  "betaKeyRequired": false,
-  "betaKeyUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/f508be5f-68f4-4fd3-b365-8206ee56d1c9",
+  "buyUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/7917cede-69b0-411f-990d-169fae665325",
+  "betaKeyRequired": true,
+  "betaKeyUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/091a7519-f694-4e80-b2c7-77ef3d3426fa",
   "price": "5 €",
   "betaDiscount": ""
 }

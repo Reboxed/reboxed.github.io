@@ -1,5 +1,5 @@
 // Shared by every page: navigation, footer, scroll effects, reveal, tilt, lightbox, hero waves.
-const VERSION = '1.19.0';
+const VERSION = '1.20.0';
 const DOWNLOAD = `https://github.com/Vlocky1/Reboxed/releases/download/v${VERSION}/Reboxed-Setup-${VERSION}.exe`;
 const PAGES = [['index.html', 'Accueil'], ['fonctionnalites.html', 'Fonctionnalités'], ['stems.html', 'Stems'], ['materiel.html', 'Matériel & clé USB'], ['telecharger.html', 'Télécharger'], ['faq.html', 'FAQ']];
 window.REBOXED = { VERSION, DOWNLOAD };
