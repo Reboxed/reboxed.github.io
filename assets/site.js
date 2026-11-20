@@ -1,7 +1,7 @@
 // Shared by every page: navigation, footer, scroll effects, reveal, tilt, lightbox, hero waves.
 const VERSION = '1.33.0';
 const DOWNLOAD = `https://github.com/Vlocky1/Reboxed/releases/download/v${VERSION}/Reboxed-Setup-${VERSION}.exe`;
-const PAGES = [['index.html', 'Accueil'], ['fonctionnalites.html', 'Fonctionnalités'], ['stems.html', 'Stems'], ['materiel.html', 'Matériel & clé USB'], ['telecharger.html', 'Télécharger'], ['faq.html', 'FAQ']];
+const PAGES = [['index.html', 'Accueil'], ['fonctionnalites.html', 'Fonctionnalités'], ['stems.html', 'Stems'], ['materiel.html', 'Matériel & clé USB'], ['telecharger.html', 'Télécharger'], ['tarifs.html', 'Tarifs'], ['faq.html', 'FAQ']];
 window.REBOXED = { VERSION, DOWNLOAD };
 
 (() => {
@@ -24,8 +24,9 @@ window.REBOXED = { VERSION, DOWNLOAD };
     <footer><div class="container foot">
       <div><a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>re<b>box</b>ed</span></a><p style="margin-top:10px;max-width:320px">Logiciel DJ pour Windows, en beta ouverte gratuite. Le logiciel DJ, en mieux.</p><a class="insta" href="https://www.instagram.com/rebox.ed/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@rebox.ed</a></div>
       <div><h4>Découvrir</h4><a href="fonctionnalites.html">Fonctionnalités</a><a href="stems.html">Stems</a><a href="materiel.html">Matériel &amp; clé USB</a></div>
-      <div><h4>Commencer</h4><a href="telecharger.html">Télécharger</a><a href="faq.html">FAQ</a><a href="https://github.com/Vlocky1/Reboxed/releases">Versions</a></div>
-      <div><h4>Contact</h4><a href="https://www.instagram.com/rebox.ed/" target="_blank" rel="noopener">Instagram @rebox.ed</a><a href="https://github.com/Vlocky1/Reboxed">GitHub</a><a href="https://github.com/Vlocky1/Reboxed/issues">Signaler un bug</a><a data-donate hidden href="#">☕ Offrir un café</a></div>
+      <div><h4>Commencer</h4><a href="telecharger.html">Télécharger</a><a href="tarifs.html">Tarifs</a><a href="faq.html">FAQ</a><a href="https://github.com/Vlocky1/Reboxed/releases">Versions</a></div>
+      <div><h4>Légal</h4><a href="tarifs.html">Tarifs · Pricing</a><a href="conditions.html">Conditions · Terms</a><a href="confidentialite.html">Confidentialité · Privacy</a><a href="remboursement.html">Remboursement · Refunds</a></div>
+      <div><h4>Contact</h4><a href="mailto:reboxed@proton.me">reboxed@proton.me</a><a href="https://www.instagram.com/rebox.ed/" target="_blank" rel="noopener">Instagram @rebox.ed</a><a href="https://github.com/Vlocky1/Reboxed">GitHub</a><a href="https://github.com/Vlocky1/Reboxed/issues">Signaler un bug</a><a data-donate hidden href="#">☕ Offrir un café</a></div>
       <p class="legal">Reboxed ${VERSION} · Logiciel indépendant, non affilié à AlphaTheta / Pioneer DJ. Démo audio : « Hot Core », Alex Beroza ft. Snowflake, CC BY 3.0 (ccMixter).</p>
     </div></footer>
     <div class="lightbox" id="lightbox"><div><img id="lbImg" alt=""><p id="lbCap"></p></div></div>`);
@@ -45,6 +46,8 @@ window.REBOXED = { VERSION, DOWNLOAD };
   $$('[data-version]').forEach((el) => { el.textContent = VERSION; });
   // Donation link ("Buy me a coffee"), shared with the app: app-config.json. Hidden while empty.
   fetch(`app-config.json?t=${Date.now()}`).then((r) => r.json()).then((cfg) => {
+    // the licence checkout (Pricing page): the same link as the app's "Buy" button
+    if (/^https:\/\//.test(cfg.buyUrl ?? '')) $$('[data-buy]').forEach((a) => { a.href = cfg.buyUrl; a.target = '_blank'; a.rel = 'noopener'; });
     if (!/^https:\/\//.test(cfg.donateUrl ?? '')) return;
     $$('[data-donate]').forEach((a) => { a.href = cfg.donateUrl; a.target = '_blank'; a.rel = 'noopener'; a.hidden = false; });
   }).catch(() => {});
@@ -89,6 +92,7 @@ window.REBOXED = { VERSION, DOWNLOAD };
 
   // ---- split section titles into words (each one rises on reveal) ----
   $$('section h2').forEach((h) => {
+    if (h.closest('.doc')) return; // long texts (terms, privacy…): titles stay still and readable
     let i = 0;
     const wrap = (node) => { const w = document.createElement('span'); w.className = 'w'; const inner = document.createElement('span'); inner.style.setProperty('--i', i++); w.append(inner); inner.append(node); return w; };
     [...h.childNodes].forEach((n) => {
