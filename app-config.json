@@ -1,10 +1,12 @@
 {
-  "_comment": "Read by the Reboxed app and by the site. https links only. donateUrl: donations; buyUrl: lifetime licence; betaKeyRequired: true makes the beta ask for a free beta key (Reboxed 1.17.2+), false lets everyone in without a key; betaKeyUrl: the free beta key checkout (read by 1.17.2+; the old name betaUrl made 1.17.0 ask for a key, so it stays out while the beta needs no key); price: shown in the app; betaDiscount: text shown to beta testers when the beta ends. betaEndsAt: last day of the open beta, YYYY-MM-DD (read by Reboxed 1.33+; beta keys stop the next day at midnight).",
+  "_comment": "Read by the Reboxed app and by the site. https links only. donateUrl: donations; buyUrl: lifetime licence; betaKeyRequired: true makes the beta ask for a free beta key (Reboxed 1.17.2+), false lets everyone in without a key; betaKeyUrl: the free beta key checkout (read by 1.17.2+; the old name betaUrl made 1.17.0 ask for a key, so it stays out while the beta needs no key); price: shown in the app; betaDiscount: text shown to beta testers when the beta ends. betaEndsAt: last day of the open beta, YYYY-MM-DD (read by Reboxed 1.33+; beta keys stop the next day at midnight). dodoProductId: the lifetime licence at Dodo Payments (Reboxed 1.34+); dodoBetaProductId: the free beta key at Dodo (Reboxed 1.34.1+), its keys stop with the beta. Lemon Squeezy keys keep working.",
   "donateUrl": "https://ko-fi.com/reboxed",
-  "buyUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/7917cede-69b0-411f-990d-169fae665325",
+  "buyUrl": "https://checkout.dodopayments.com/buy/pdt_0NsHIOSRfFGFzVqkzq5ca?quantity=1",
   "betaKeyRequired": true,
-  "betaKeyUrl": "https://reboxed.lemonsqueezy.com/checkout/buy/091a7519-f694-4e80-b2c7-77ef3d3426fa",
+  "betaKeyUrl": "https://checkout.dodopayments.com/buy/pdt_0NsUxzJBBnEqtA4jnmpwP?quantity=1",
   "price": "5 €",
   "betaDiscount": "",
-  "betaEndsAt": "2027-01-31"
+  "betaEndsAt": "2027-01-31",
+  "dodoProductId": "pdt_0NsHIOSRfFGFzVqkzq5ca",
+  "dodoBetaProductId": "pdt_0NsUxzJBBnEqtA4jnmpwP"
 }
